@@ -1,13 +1,13 @@
-::marker {
-    unicode-bidi: isolate;
-    font-variant-numeric: tabular-nums;
-    text-transform: none;
-    text-indent: 0px !important;
-    text-align: start !important;
-    text-align-last: start !important;
-  }
-  
-  html {
+li::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+html {
       /* Setting a base font size of 10px give us easier rem calculations
            Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
          */
@@ -21,9 +21,10 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #ffffff;
-        border-radius: 10px;
+        background-color: rgb(54, 53, 53);
+        color: rgb(252, 144, 20);
         z-index: 1000;
+        border-bottom: 0.3rem solid #eee;
       }
 
     body {
@@ -64,7 +65,6 @@
     #main {
       margin: 30px 8px;
       padding: 15px;
-      border-radius: 20px;
       background: #eee;
     }
     
@@ -73,7 +73,6 @@
         margin: 0;
       }
     }
-
 
     img {
       max-width: 50%;
@@ -102,31 +101,49 @@
       #img-caption {
         font-size: 1.2rem;
       }
+    } 
+    
+    ul {
+      list-style-type: none; /* 移除列表項目的點或數字 */
+      padding-inline-start: 1rem;
     }
     
-    #headline {
-      margin: 50px 0;
-      text-align: center;
+    li::before {
+      content: "▼"; /* 使用向下箭頭字符作為偽元素的內容 */
+      display: inline-block;
+      margin-right: 0.5rem; /* 設置箭頭與列表項文本之間的間距 */
     }
-    
+
     ul {
       max-width: 550px;
       margin: 0 auto 50px auto;
-      text-align: left;
+      text-align: start;
       line-height: 1.6;
     }
     
     li {
       margin: 16px 0;
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+      background-color:rgba(255, 255, 255, 0.914);
+      border-radius: 2rem;
     }
     
-    .travel{
-      text-shadow: 0 0 5px rgb(118, 146, 70);
+    .answer{
+      display: none;
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+    }
+
+    .smalltitle{
+      color: rgb(197, 107, 4);
+      font-size: 1.2em;
+    }
+
+    span{
+      text-shadow: 0 0 10px rgb(118, 146, 70);
     }
     
-    .IT{
-      color: rgb(172, 130, 3);
-    }
   
     /* 如果有引用其他文字的話，可以參考格式 
     blockquote {

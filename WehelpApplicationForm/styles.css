@@ -1,8 +1,8 @@
 li::marker {
-  unicode-bidi: isolate;
-  font-variant-numeric: tabular-nums;
-  text-transform: none;
-  text-indent: 0px !important;
+  unicode-bidi: isolate; /*文本不受周圍文本方向的影響。*/
+  font-variant-numeric: tabular-nums; /*使用等寬數字排列*/
+  text-transform: none; 
+  text-indent: 0px !important; /*指定文本的縮排，這裡設置為 0 像素*/
   text-align: start !important;
   text-align-last: start !important;
 }
@@ -22,9 +22,10 @@ html {
         left: 0;
         width: 100%;
         background-color: rgb(54, 53, 53);
-        color: rgb(252, 144, 20);
+        color: #efddb1;
         z-index: 1000;
-        border-bottom: 0.3rem solid #eee;
+        border-bottom: 0.3rem solid rgba(239, 221, 177, 0.9);
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       }
 
     body {
@@ -41,8 +42,8 @@ html {
       font-size: 4rem;
       margin-bottom: 0;
     }
-    
-    @media (max-width: 460px) {
+
+    @media (max-width: 630px) {
       h1 {
         font-size: 3.5rem;
         line-height: 1.2;
@@ -59,16 +60,16 @@ html {
       color: #366891;
     } 
     .link1:visited, .link2:visited, .link3:visited, .link4:visited{
-      color: #74638f;
+      color: rgb(197, 107, 4);;
     }
     
     #main {
       margin: 30px 8px;
       padding: 15px;
-      background: #eee;
+      background: #eeeeeecd;
     }
     
-    @media (max-width: 460px) {
+    @media (max-width: 630px) {
       #main {
         margin: 0;
       }
@@ -92,7 +93,7 @@ html {
       margin: 15px 0 5px 0;
     }
     
-    @media (max-width: 460px) {
+    @media (max-width: 630px) {
       #img-caption {
         font-size: 1.4rem;
       }
@@ -123,10 +124,11 @@ html {
     
     li {
       margin: 16px 0;
-      padding-left: 1rem;
-      padding-right: 0.5rem;
-      background-color:rgba(255, 255, 255, 0.914);
+      padding: 0.25rem 0.5rem 0.25rem 1rem;
+      background:linear-gradient(135deg, rgb(197, 107, 4) 1%,rgba(239, 221, 177, 0.9)5%,rgba(54, 53, 53, 0.3),rgba(239, 221, 177, 0.9)95%, rgb(197, 107, 4) 99%);
       border-radius: 2rem;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-weight: bold;
     }
     
     .answer{
@@ -144,6 +146,9 @@ html {
       text-shadow: 0 0 10px rgb(118, 146, 70);
     }
     
+    .paragraphlastline{
+      margin-bottom: 2.5rem;
+    }
   
     /* 如果有引用其他文字的話，可以參考格式 
     blockquote {

@@ -124,6 +124,10 @@ html {
     color: rgb(172, 130, 3);
   }
 
+  span{
+    text-shadow: 0 0 5px rgba(75, 217, 246, 0.942);
+  }
+
   /* 如果有引用其他文字的話，可以參考格式 
   blockquote {
   font-style: italic;

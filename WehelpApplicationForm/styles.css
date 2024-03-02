@@ -56,10 +56,10 @@ html {
       }
     }
   
-    .link1, .link2, .link3, .link4 {
+    .link1, .link2, .link3, .link4, .link5, .link6 {
       color: #366891;
     } 
-    .link1:visited, .link2:visited, .link3:visited, .link4:visited{
+    .link1:visited, .link2:visited, .link3:visited, .link4:visited, .link5:visited, .link6:visited{
       color: rgb(197, 107, 4);;
     }
     
@@ -75,7 +75,7 @@ html {
       }
     }
 
-    img {
+    #image {
       max-width: 50%;
       display: block;
       height: auto;
@@ -149,7 +149,14 @@ html {
     .paragraphlastline{
       margin-bottom: 2.5rem;
     }
-  
+    
+    #image2 {
+      max-width: 100%;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+    }
+
     /* 如果有引用其他文字的話，可以參考格式 
     blockquote {
     font-style: italic;
